@@ -24,8 +24,8 @@ object Form1: TForm1
     Caption = #1042#1077#1088#1089#1080#1103': 0.2'
   end
   object Label2: TLabel
-    Left = 272
-    Top = 72
+    Left = 268
+    Top = 16
     Width = 133
     Height = 23
     Caption = #1057#1090#1072#1090#1091#1089' '#1080#1075#1088#1099': '
@@ -37,8 +37,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 504
-    Top = 72
+    Left = 500
+    Top = 16
     Width = 113
     Height = 23
     Caption = #1053#1077' '#1085#1072#1081#1076#1077#1085#1072
@@ -50,8 +50,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 272
-    Top = 136
+    Left = 268
+    Top = 56
     Width = 213
     Height = 23
     Caption = #1040#1082#1090#1091#1072#1083#1100#1085#1086#1089#1090#1100' Byond: '
@@ -63,8 +63,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 504
-    Top = 136
+    Left = 500
+    Top = 56
     Width = 109
     Height = 23
     Caption = 'V 512.1460'
@@ -101,6 +101,19 @@ object Form1: TForm1
     Caption = #1055#1086#1076#1076#1077#1088#1078#1072#1090#1100' '#1072#1074#1090#1086#1088#1072
     TabOrder = 2
     OnClick = Button3Click
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 344
+    Top = 104
+    Width = 185
+    Height = 105
+    Caption = #1057#1090#1077#1087#1077#1085#1100' '#1088#1072#1089#1090#1103#1075#1080#1074#1072#1085#1080#1103
+    ItemIndex = 0
+    Items.Strings = (
+      #1052#1072#1083#1072#1103
+      #1057#1088#1077#1076#1085#1103#1103
+      #1041#1086#1083#1100#1096#1072#1103)
+    TabOrder = 3
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

@@ -17,6 +17,7 @@ type
     Button3: TButton;
     Label4: TLabel;
     Label5: TLabel;
+    RadioGroup1: TRadioGroup;
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -29,9 +30,9 @@ type
   end;
 
 const
-  version_STR = '0.2';
+  version_STR = '0.3';
   tiles_CNTR = 15;
-  tiles_horz = 32;
+  //tiles_horz = 32;
   offset_horz_x = $2F7294;
   offset_horz_y = $2FB854;
   offset_CNTR = $2F7298;
@@ -149,6 +150,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 Var
  ByondCore_dll_p : Pointer;
  ProcessHandle : THandle;
+ tiles_horz : byte;
 begin
 
    DreemSeeker_PID := GetProcessId('dreamseeker.exe');
@@ -160,6 +162,15 @@ begin
     finally
      CloseHandle(ProcessHandle);
     end;
+
+   tiles_horz := 20;
+
+   case RadioGroup1.ItemIndex of
+    0: tiles_horz := 20;
+    1: tiles_horz := 26;
+    2: tiles_horz := 32;
+    else tiles_horz := 20;
+   end;
 
    if (DreemSeeker_PID > 0) and (ByondCore_dll_p <> nil) then begin
     SetAdrValue(DreemSeeker_PID, cardinal(byondcore_dll_p) + offset_horz_x, 4, tiles_horz); // X
